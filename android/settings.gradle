@@ -1,0 +1,3 @@
+rootProject.name = 'rn_eos2'
+
+include ':app'
