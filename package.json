@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "eosjs-rn": "^20.0.0-beta2.4",
+    "ethers": "^4.0.12",
     "react": "16.6.1",
     "react-native": "0.57.5"
   },
