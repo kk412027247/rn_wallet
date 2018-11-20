@@ -10,44 +10,6 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-// import bitcoin from 'react-native-bitcoinjs-lib'
-// const testnet = bitcoin.networks.testnet;
-// function rng () { return Buffer.from('tmd123zzzzzzzzzzzzzzzzzzzzzzzzzz') }
-// function rng2 () { return Buffer.from('tmd321333zzzzzzzzzzzzzzzzzzzzzzz') }
-//
-//
-//
-// const keyPair = bitcoin.ECPair.makeRandom({ network: testnet, rng: rng });
-// const wif = keyPair.toWIF();
-// const address = keyPair.getAddress();
-//
-//
-// const keyPair2 = bitcoin.ECPair.makeRandom({ network: testnet, rng: rng2 });
-// const wif2 = keyPair2.toWIF();
-// const address2 = keyPair2.getAddress();
-//
-//
-//
-// console.log('wif',wif);
-// console.log('address',address);
-//
-// console.log('wif2',wif2);
-// console.log('address2',address2);
-//
-// const tx = new bitcoin.TransactionBuilder(testnet);
-// console.log(tx);
-//
-// tx.setVersion(1);
-// tx.addInput('54c8e17ab1c8a9c9c822d4472bd6a237f50557568321902ac8ca2fe7aad5fae7', 1);
-// tx.addOutput('miAMpCdoM3SuRMRoEVHp8smFdDAz29WA9g', 1);
-// tx.addOutput('mmH6e8tfLyvrrnFF3o1scaNsPXShGY89rb', 1);
-// tx.sign(0, keyPair);
-//
-//
-//
-// console.log(tx.build().toHex());
-
-
 import bitcoin from 'bitcoinjs-lib'
 const testnet = bitcoin.networks.testnet;
 
