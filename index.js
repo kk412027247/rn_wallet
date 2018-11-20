@@ -8,6 +8,6 @@ import App from './app3';
 import {name as appName} from './app.json';
 YellowBox.ignoreWarnings = ([
   'require.js:122 Require cycle',
-])
+]);
 
 AppRegistry.registerComponent(appName, () => App);
