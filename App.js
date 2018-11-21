@@ -12,7 +12,7 @@ import {Platform, StyleSheet, Text, View} from 'react-native';
 import { Api, JsonRpc, RpcError, JsSignatureProvider } from 'eosjs-rn';
 
 const rpc = new JsonRpc('http://junglehistory.cryptolions.io:18888', { fetch });
-rpc.get_info().then(console.log).catch(console.log)
+rpc.get_info().then(console.log).catch(console.log);
 
 const privateKey = "5Jg3KWnT2cUsKvmiJYRo7iULfwyhunVU3uDrZEAvjtq2GpABiJQ";
 const signatureProvider = new JsSignatureProvider([privateKey]);
