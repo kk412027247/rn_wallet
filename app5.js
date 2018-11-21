@@ -10,34 +10,8 @@
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 
-import bitcoin from 'bitcoinjs-lib'
-const testnet = bitcoin.networks.testnet;
-
-function rng () { return Buffer.from('tmd123zzzzzzzzzzzzzzzzzzzzzzzzzz') }
-function rng2 () { return Buffer.from('tmd321333zzzzzzzzzzzzzzzzzzzzzzz') }
-
-const alice = bitcoin.ECPair.makeRandom({ network: testnet, rng: rng });
-// has 0.44522 BTC
-
-const { address } = bitcoin.payments.p2pkh({ pubkey: alice.publicKey, network: testnet });
-// mmH6e8tfLyvrrnFF3o1scaNsPXShGY89rb
-
-const bob = bitcoin.ECPair.makeRandom({ network: testnet, rng: rng2 });
-// has 0.43939 BTC
-
-const { address:address2 } = bitcoin.payments.p2pkh({ pubkey: bob.publicKey, network: testnet });
-// miAMpCdoM3SuRMRoEVHp8smFdDAz29WA9g
-
-
-const tx = new bitcoin.TransactionBuilder(testnet);
-tx.setVersion(1);
-tx.addInput('23f6cce4b88eb7266498fccf079c1993615e566be8d88c7bd516612ee0a0c2f6', 0);
-tx.addOutput(address2, 44496000 - 10000 - 3000);
-tx.addOutput('mhZoKskuU7DuqUTLvHs94X3bKHa6NC1BP6', 10000);
-tx.sign(0, bob);
-
-console.log(tx.build().toHex());
-
+import web3 from 'web3';
+console.log(web3);
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
