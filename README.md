@@ -4,3 +4,4 @@
 - app2.js ethers
 - app3.js bitcoinjs-lib
 - app4.js eosjs
+- app5.js web3
